@@ -4,3 +4,8 @@ description: Software QA Engineer
 theme: jekyll-theme-minimal
 include:
   - assets/
+navigation:
+  - title: Home
+    url: /
+  - title: LeetCode Problems
+    url: /leetcode/
