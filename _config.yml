@@ -1,7 +1,12 @@
-title : Krishna Belel
-logo : /assets/img/profile.jpg
-description : Software QA Engineer
-#show_downloads : true
-theme : jekyll-theme-minimal
+title: Krishna Belel
+logo: /assets/img/profile.jpg
+description: Software QA Engineer
+theme: jekyll-theme-minimal
 include:
   - assets/
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
