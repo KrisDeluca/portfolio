@@ -1,11 +1,25 @@
+# Site settings
 title: Krishna Belel
 logo: /assets/img/profile.jpg
 description: Software QA Engineer
+
+# Build settings
 theme: jekyll-theme-minimal
 include:
   - assets/
-navigation:
-  - title: Home
-    url: /
-  - title: LeetCode Problems
-    url: /leetcode/
+
+# Navigation settings
+# Jekyll's minimal theme does not directly support navigation configuration like this,
+# You may need to handle breadcrumbs manually in your layout file.
+# For now, you can use this to guide you in adding a static breadcrumb.
+
+# Default settings
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Markdown settings (if you use kramdown for Markdown processing)
+markdown: kramdown

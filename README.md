@@ -23,3 +23,7 @@ With 4 years of experience in quality assurance, I excel in Automation, Manual, 
 
 - **ISTQB – Certified Tester Foundation Level**
 - **Microsoft – Software Development Fundamentals**
+
+## LeetCode Problems
+
+You can find a list of LeetCode problems I have solved on my [LeetCode page](leetcode.md).
