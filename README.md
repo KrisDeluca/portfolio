@@ -21,5 +21,5 @@ With 4 years of experience in quality assurance, I excel in Automation, Manual, 
 
 ## Certifications
 
-- **ISTQB – Certified Tester Foundation Level:** Validates my foundational knowledge in software testing principles and practices.
-- **Microsoft – Software Development Fundamentals:** Demonstrates my understanding of core software development concepts and practices.
+- **ISTQB – Certified Tester Foundation Level**
+- **Microsoft – Software Development Fundamentals**
