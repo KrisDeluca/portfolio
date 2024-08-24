@@ -2,7 +2,7 @@
 
 **Software Test Engineer**
 
-<p class="justify-text">
+<p style="text-align: justify;">
 With 4 years of experience in quality assurance, I excel in Automation, Manual, and API testing. My expertise lies in ensuring the delivery of robust and reliable software products through the implementation of thorough and effective testing methodologies. I am dedicated to fostering continuous improvement in software development processes and leveraging my skills to enhance product quality. My approach combines a detail-oriented mindset with a proactive attitude towards identifying and addressing potential issues, ultimately driving successful project outcomes.
 </p>
 

@@ -4,9 +4,3 @@ description: Software QA Engineer
 theme: jekyll-theme-minimal
 include:
   - assets/
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "default"
