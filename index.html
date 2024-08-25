@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Krishna Belel Portfolio</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link href="css/open-iconic-bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+
+    <link href="css/aos.css" rel="stylesheet">
+
+    <link href="css/ionicons.min.css" rel="stylesheet">
+
+    <link href="css/flaticon.css" rel="stylesheet">
+    <link href="css/icomoon.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <style>
+
+        /*======================================
+        //--//-->   ABOUT
+        ======================================*/
+
+        .about-mf .box-shadow-full {
+          padding-top: 4rem;
+          padding-bottom: 4rem;
+        }
+
+        .about-mf .about-img {
+          margin-bottom: 2rem;
+        }
+
+        .about-mf .about-img img {
+          margin-left: 10px;
+        }
+
+
+        .skill-mf .progress {
+          /* background-color: #cde1f8; */
+          margin: .5rem 0 1.2rem 0;
+          border-radius: 0;
+          height: .7rem;
+        }
+
+        .skill-mf .progress .progress-bar {
+          height: .7rem;
+          background-color: #ffbd39;
+        }
+
+
+        /* Animation styles */
+        #typing-animation {
+          position: relative;
+          font-size: 30px;
+          font-weight: bold;
+          color: rgb(255, 255, 255);
+          overflow: hidden;
+          white-space: nowrap;
+          animation: typing 3s steps(20, end) infinite;
+        }
+
+        #typing-animation:before {
+          content: "";
+          /* position: absolute; */
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          background-color: #ccc;
+          animation: typing-cursor 0.5s ease-in-out infinite;
+        }
+
+        @keyframes typing {
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+          }
+        }
+
+        @keyframes typing-cursor {
+          from {
+            width: 5px;
+          }
+          to {
+            width: 0;
+          }
+        }
+
+
+        /* project image zoom effect */
+
+        .zoom-effect {
+          overflow: hidden;
+          transition: transform 0.3s ease-out;
+        }
+
+        .zoom-effect:hover {
+          transform: scale(1.1);
+        }
+
+
+    </style>
+
+
+</head>
+<body data-offset="300" data-spy="scroll" data-target=".site-navbar-target">
+
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Krishna Belel</a>
+        <button aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" data-target="#ftco-nav" data-toggle="collapse" type="button">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#home-section"><span>Home</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#about-section"><span>About</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#resume-section"><span>Resume</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#project-section"><span>Projects</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact-section"><span>Contact</span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="hero" id="home-section">
+    <div class="home-slider  owl-carousel">
+        <div class="slider-item ">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+                     data-scrollax-parent="true">
+                    <div class="one-third js-fullheight order-md-last img"
+                         style="background-image:url(images/bg_1.png);">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="one-forth d-flex  align-items-center ftco-animate"
+                         data-scrollax=" properties: { translateY: '70%' }">
+                        <div class="text">
+                            <span class="subheading">Hello!</span>
+                            <h1 class="mb-4 mt-3">I'm <span>Krishna Belel</span></h1>
+
+                            <!-- Element to contain animated typing -->
+                            <span id="typing-animation"></span>
+
+                            <script>
+
+                                // Initialize the typing animation
+                                const typingAnimationElement = document.getElementById('typing-animation');
+
+                                // Create an array of typing text
+                                const typingTexts = [
+                                'Engineer  ',
+                                'Tech Enthusiast  ',
+                                'Art Aficionado   ',
+                                ];
+
+                                // Create a function to display the typing animation for a given text
+                                function playTypingAnimation(text) {
+                                // Loop through each character and add it to the element
+                                for (let i = 0; i < text.length; i++) {
+                                    setTimeout(() => {
+                                    typingAnimationElement.textContent += text[i];
+                                    }, i * 200); // Increase the delay to slow down the typing animation
+                                }
+
+                                // Once the animation is complete, reset the text and start over
+                                setTimeout(() => {
+                                    typingAnimationElement.textContent = '';
+                                    playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+                                }, text.length * 200);
+                                }
+
+                                // Start the typing animation loop
+                                playTypingAnimation(typingTexts[0]);
+
+                            </script>
+
+                            <br>
+                            <br>
+                            <h2>A Senior Quality Engineer</h2>
+                            <!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+                            <!-- <br> -->
+                            <p><a class="btn btn-primary py-3 px-4"
+                                  href="https://www.linkedin.com/in/krishna-belel-qa/">LinkedIn</a>
+                                <a class="btn btn-white btn-outline-white py-3 px-4"
+                                   href="https://github.com/KrisDeluca/">My works</a>
+                                <a class="btn btn-primary py-3 px-4"
+                                   href="https://leetcode.com/u/Kris_Deluca/">Leetcode</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    <div class="container">
+        <div class="row">
+            <div class="row d-flex align-items-stretch">
+                <!-- <div class="row d-flex"> -->
+                <div class="col-md-6 col-lg-5 d-flex">
+                    <div class="img-about img d-flex align-items-stretch">
+                        <div class="overlay">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-5">
+                                    <div class="about-img">
+                                        <img alt="" class="img-fluid rounded b-shadow-a" src="images/about-me.png">
+                                    </div>
+                                </div>
+                                <!-- Details next to profile image -->
+                                <div class="col-sm-6 col-md-7">
+                                    <div class="about-info">
+                                        <p><span class="title-s">Name: </span> <span>Krishna Belel</span></p>
+                                        <p><span class="title-s">Job Role: </span>
+                                            <span>Software Quality Engineer</span></p>
+                                        <p><span class="title-s">Experience: </span> <span>3 Years 10 Months</span></p>
+                                        <p><span class="title-s">Address: </span> <span>Mumbai, India</span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill-mf">
+                                <p class="title-s">Skills</p>
+                                <span>Selenium/Java</span> <span class="pull-right">95%</span>
+                                <div class="progress">
+                                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="95" class="progress-bar"
+                                         role="progressbar"
+                                         style="width: 95%;"></div>
+                                </div>
+
+                                <span>Playwright/Typescript</span> <span class="pull-right">70%</span>
+                                <div class="progress">
+                                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" class="progress-bar"
+                                         role="progressbar"
+                                         style="width: 70%"></div>
+                                </div>
+
+                                <span>Rest Assured</span> <span class="pull-right">70%</span>
+                                <div class="progress">
+                                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" class="progress-bar"
+                                         role="progressbar"
+                                         style="width: 70%"></div>
+                                </div>
+
+                                <span>API Testing</span> <span class="pull-right">90%</span>
+                                <div class="progress">
+                                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" class="progress-bar"
+                                         role="progressbar"
+                                         style="width: 90%"></div>
+                                </div>
+
+                                <span>SQL</span> <span class="pull-right">80%</span>
+                                <div class="progress">
+                                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" class="progress-bar"
+                                         role="progressbar"
+                                         style="width: 80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+                    <div class="row justify-content-start pb-3">
+                        <div class="col-md-12 heading-section ftco-animate">
+
+                            <h1 class="big">About</h1>
+                            <h2 class="mb-4">About Me</h2>
+
+                            <p style="text-align: justify;">I’m Krishna Belel, a dedicated QA Engineer with over 4 years
+                                of experience in Automation, Manual
+                                and API testing. I specialize in delivering high-quality software by leveraging strong
+                                testing methodologies
+                                and automation frameworks. My expertise lies in ensuring seamless functionality, driving
+                                continuous improvement,
+                                and contributing to the development of robust software solutions.</p>
+                            <ul class="about-info mt-4 px-md-0 px-2">
+                                <li class="d-flex"><span>Profile:</span> <span>Software Quality Assurance</span></li>
+                                <li class="d-flex"><span>Domain:</span> <span>P&C Insurance, Data Analytics</span></li>
+                                <li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li>
+                                <li class="d-flex"><span>Language:</span> <span>Java, Typescript &amp; SQL</span></li>
+                                <li class="d-flex"><span>Automation:</span> <span>Selenium, Playwright &amp; REST Assured</span>
+                                </li>
+                                <li class="d-flex"><span>Bug Tracking:</span>
+                                    <span>JIRA, ADO Defect Management, ClickUp</span></li>
+                                <li class="d-flex"><span>Interest:</span> <span>Reading, Drawing, Sports, Anime</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-section ftco-no-pb" id="resume-section">
+    <div class="container">
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-10 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Resume</h1>
+                <h2 class="mb-4">Resume</h2>
+                <p>With over 4 years of experience as a QA Engineer, I specialize in Automation, Manual and API testing.
+                    My focus is on delivering high-quality software solutions through advanced testing methodologies and
+                    continuous improvement.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <h1 class="big-4">Experience</h1>
+            <div class="underline"></div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="resume-wrap ftco-animate">
+                    <span class="date">Sep 2023 - Present</span>
+                    <h2>Software Test Engineer</h2>
+					<a href="https://www.media.net/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">
+						<span class="position">Media.net</span>
+					</a>
+					<p class="mt-4" style="text-align: justify;">Media.net is a leading global ad tech company specializing in contextual advertising solutions to drive engagement and revenue for its clients.
+					<ul>
+						<li style="text-align: justify;">Managed QA processes for two products, conducting Manual, API and Automation testing.</li>
+						<li style="text-align: justify;">Worked on automation projects using Selenium with Java and Playwright with TypeScript.</li>
+						<li style="text-align: justify;">Used TestNG for automation builds and integrated Maven for project management.</li>
+						<li style="text-align: justify;">Deployed cron jobs for regular automation suite runs on Debian VMware.</li>
+						<li style="text-align: justify;">Utilized GitLab for version control, code repository management, and CI/CD pipeline implementation.</li>
+					</ul>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+                <div class="resume-wrap ftco-animate">
+                    <span class="date"> Jan 2021 - Sep 2023</span>
+                    <h2>Senior Quality Engineer</h2>
+					<a href="https://www.ltimindtree.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">
+						<span class="position">LTIMindtree</span>
+					</a>
+					<p class="mt-4" style="text-align: justify;">LTIMindtree is a global technology consulting and services company that drives digital transformation through innovative IT solutions and consulting services.
+					<ul>
+						<li style="text-align: justify;">Developed automated regression test cases for monthly updates, ensuring consistent end-product.</li>
+						<li style="text-align: justify;">Handled complex automation scenarios and improved framework robustness.</li>
+						<li style="text-align: justify;">Experienced in functional, regression, integration, smoke and exploratory testing methodologies.</li>
+						<li style="text-align: justify;">Managed defects using ADO and JIRA, ensuring timely resolution and effective communication.</li>
+						<li style="text-align: justify;">Ensured data integrity through proficient SQL database testing and collaboration with Agile teams.</li>
+					</ul>
+					</p>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="row">
+            <h1 class="big-4">Education</h1>
+            <div class="underline"></div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="resume-wrap ftco-animate">
+                    <span class="date">2016-2020</span>
+                    <h2>Bachelor of Engineering</h2>
+                    <span class="position">Mumbai University</span>
+                    <p class="mt-4">Grade: 8.46 CGPA</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="resume-wrap ftco-animate">
+                    <span class="date">2014-2016</span>
+                    <h2>Higher Secondary School</h2>
+                    <span class="position">Mithibai Junior College</span>
+                    <p class="mt-4">Grade: 79.23 %</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6 text-center ftco-animate">
+                <p>
+                    <a class="btn btn-primary py-4 px-5"
+                       href="https://www.canva.com/design/DAGO2HvAMKg/jj7cJZSBZ12lj2mxjF_Axg/view?utm_content=DAGO2HvAMKg&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+                       rel="noopener noreferrer"
+                       target="_blank">
+                        Download Cover
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="ftco-section" id="project-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Projects</h1>
+                <h2 class="mb-4">Projects</h2>
+                <p>Below are the sample Automation Maven projects using Selenium on TestNg and Cucumber framework.</p>
+            </div>
+        </div>
+        <br>
+        <!-- added justify-content-center to center align the last two projects -->
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-4 d-flex ftco-animate" style="margin-right: 60px;">
+                <div class="blog-entry justify-content-end">
+                    <a class="block-20 zoom-effect" href="https://github.com/KrisDeluca/MakeMyTrip"
+                       style="background-image: url('images/proj_4.jpg');">
+                    </a>
+                    <div class="text mt-3 float-right d-block">
+
+                        <h3 class="heading"><a href="https://github.com/KrisDeluca/MakeMyTrip">MakeMyTrip - Flight Automation</a></h3>
+                        <p style="text-align: justify;">The MakeMyTrip Flight Trip automation code is constructed utilizing Java Selenium and provides users with the choice of One Way, Round Trip, and Multi Trip options. The code is a Maven project that uses the POM model and incorporates Extent reports to generate test results with screenshots.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate" style="margin-right: 60px;">
+                <div class="blog-entry justify-content-end">
+                    <a class="block-20 zoom-effect"
+                       href="https://github.com/KrisDeluca/DemoWebShop" style="background-image: url('images/proj_5.jpg');">
+                    </a>
+                    <div class="text mt-3 float-right d-block">
+
+                        <h3 class="heading"><a
+                                href="https://github.com/KrisDeluca/DemoWebShop">Ecommerce - Cart Automation</a></h3>
+                        <p style="text-align: justify;">This is a Selenium code that automates an e-commerce website, covering test cases for registration, login and adding items to the cart. The code is a Maven project that uses Page Factory model & incorporates Cucumber reports to generate detailed test results with screenshots.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+    <!-- <div class="container"> -->
+    <div class="row justify-content-center">
+        <div class="col-md-7 ftco-animate text-center">
+            <h2>More projects on<span> Github  </span></h2>
+            <div class="heading"><h4> I love to solve business problems &amp; uncover hidden QA stories </h4>
+                <br>
+                <p><a class="btn btn-primary py-3 px-5" href="https://github.com/KrisDeluca">GitHub</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+</div>
+</section>
+
+
+<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Contact</h1>
+                <h2 class="mb-4">Contact Me</h2>
+                <p>Below are the details to reach out to me!</p>
+            </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box p-4 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-map-signs"></span>
+                    </div>
+                    <h3 class="mb-4">Address</h3>
+                    <p>Mumbai, India</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box p-4 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-phone2"></span>
+                    </div>
+                    <h3 class="mb-4">Contact Number</h3>
+                    <p><a href="tel://9028314690">+ 91 902 8314 690</a></p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box p-4 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-paper-plane"></span>
+                    </div>
+                    <h3 class="mb-4">Email Address</h3>
+                    <p><a href="mailto:krishnabelel90@gmail.com">krishnabelel90@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box p-4 text-center">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="icon-globe"></span>
+                    </div>
+                    <h3 class="mb-4">Download Resume</h3>
+                    <p>
+                        <u><a href="https://www.canva.com/design/DAGFLV8v5Hg/MtKwZK_tpKWlB9eMrD4fXw/view?utm_content=DAGFLV8v5Hg&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+                              rel="noopener noreferrer" target="_blank">
+                            Link
+                        </a></u>
+                    </p>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+<footer class="ftco-footer ftco-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                    All rights reserved | This template is made with <i aria-hidden="true"
+                                                                        class="icon-heart color-danger"></i> by <a
+                            href="https://colorlib.com" target="_blank">Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- loader -->
+<div class="show fullscreen" id="ftco-loader">
+    <svg class="circular" height="48px" width="48px">
+        <circle class="path-bg" cx="24" cy="24" fill="none" r="22" stroke="#eeeeee" stroke-width="4"/>
+        <circle class="path" cx="24" cy="24" fill="none" r="22" stroke="#F96D00" stroke-miterlimit="10"
+                stroke-width="4"/>
+    </svg>
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
