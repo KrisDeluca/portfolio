@@ -228,7 +228,7 @@
                                         <p><span class="title-s">Name: </span> <span>Krishna Belel</span></p>
                                         <p><span class="title-s">Job Role: </span>
                                             <span>Software Quality Engineer</span></p>
-                                        <p><span class="title-s">Experience: </span> <span>3 Years 10 Months</span></p>
+                                        <p><span class="title-s">Experience: </span> <span id="experience"></span></p>
                                         <p><span class="title-s">Address: </span> <span>Mumbai, India</span></p>
                                     </div>
                                 </div>
@@ -345,7 +345,6 @@
 						<li style="text-align: justify;">Deployed cron jobs for regular automation suite runs on Debian VMware.</li>
 						<li style="text-align: justify;">Utilized GitLab for version control, code repository management, and CI/CD pipeline implementation.</li>
 					</ul>
-                    </p>
                 </div>
 
             </div>
@@ -365,7 +364,6 @@
 						<li style="text-align: justify;">Managed defects using ADO and JIRA, ensuring timely resolution and effective communication.</li>
 						<li style="text-align: justify;">Ensured data integrity through proficient SQL database testing and collaboration with Agile teams.</li>
 					</ul>
-					</p>
                 </div>
 
             </div>
@@ -527,6 +525,7 @@
                 </div>
             </div>
         </div>
+    </div>
 </section>
 
 
@@ -555,6 +554,25 @@
                 stroke-width="4"/>
     </svg>
 </div>
+
+<script>
+    function calculateExperience(startYear, startMonth) {
+        const startDate = new Date(startYear, startMonth - 1); // Months are 0-based in JS
+        const currentDate = new Date();
+
+        let years = currentDate.getFullYear() - startDate.getFullYear();
+        let months = currentDate.getMonth() - startDate.getMonth();
+
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+
+        return `${years} Years ${months} Months`;
+    }
+
+    document.getElementById("experience").textContent = calculateExperience(2021, 1);
+</script>
 
 
 <script src="js/jquery.min.js"></script>
